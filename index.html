@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car game</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;        
+        }
+        .hide{
+            display: none;
+        }
+       .car {
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    bottom: 120px;
+    background-image: url(Images/car.png);
+    background-size: cover;
+
+
+}
+
+        
+        .GameArea{
+            width: 390px;
+            height: 100vh;
+            background-color: rgb(29, 26, 26);
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+          
+        }
+        .lines{
+            width: 10px;
+            height: 100px;
+            background: white;
+            position: absolute;
+            margin-left: 195px;
+        }
+        .CarGame{
+            background-image: url(Images/ferarri-background.jpg);
+            background-size: cover;
+
+        }
+        .other{
+    width: 50px;
+    height: 70px;
+    position: absolute;
+    bottom: 120px;
+    background-image: url(Images/carhit.png);
+    background-size: cover;
+    background-color: transparent;
+}
+
+        .Score{
+            position: absolute;
+            top: 15px;
+            left: 50px;
+            text-align: center;
+            padding-top: 23px;
+            font-size: 30px;
+            line-height: 20px;
+            background-color: saddlebrown;
+            color: white;
+            width: 300px;
+            height: 100px;
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+        }
+        .StartScreen{
+            position: absolute;
+            background-color:gray;
+            color: white;
+            z-index: 1;
+            margin-top: 210px;
+            margin-left:360px;
+            text-align: center;
+            box-shadow: 0 0 20px 0px black;
+            font-size: 30px;
+            width: 50%;
+            height: 200px;
+            cursor: pointer;
+            border-radius: 23px;
+
+        }
+        button{
+            padding: 10px;
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="CarGame">
+        <div class="Score">
+
+        </div>
+        <div class="StartScreen">
+            <p>START GAME<br><br>move joystick to start <br><br>If you hit the car you lose</p>
+            <button onclick="Reset()">Reset Highest Score</button>
+        </div>
+        <div class="GameArea">
+
+        </div>
+    </div>    
+    <script src="script.js"></script>   
+</body>
+</html>
+
